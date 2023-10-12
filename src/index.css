@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* background-color: rgb(230, 235, 239); */
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

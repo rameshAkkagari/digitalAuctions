@@ -1,0 +1,62 @@
+.biddingpage{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    background-color: rgb(241, 241, 239);
+}
+.startbidding{
+    padding: 20px;
+}
+.startbidding p{
+    background-color: rgb(95, 198, 233);
+    color: black;
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.biddingAuction{
+    display: flex;
+    justify-content: space-around;
+}
+.biddingAuction div img{
+    height: 800px;
+    padding: 10px;
+}
+.biddingActivites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+}
+.currentPrice h1{
+    font-size: 80px;
+    margin: 0px;
+}
+.actionsButtons{
+    display: flex;
+    gap: 2rem;
+}
+.actionsButtons button{
+    width:90px;
+    height: 50px;
+    font-size:40px;
+    border-radius: 100%;
+}
+.actionsButtons span{
+    font-size: 60px;
+}
+.placeBID {
+    width: 90px;
+    height: 30px;
+    color: black;
+    background-color:lightseagreen;
+    border: none;
+    border-radius: 3px;
+}
+ul li{
+    line-height: 40px;
+}

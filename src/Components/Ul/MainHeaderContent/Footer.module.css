@@ -1,0 +1,11 @@
+.footer{
+    width: 100vw;
+    height: 500px;
+    background-color: black;
+}
+.footerlinks{
+    width: 80vw;
+    height: 500px;
+    margin: auto;
+    background-color: aliceblue;
+}

@@ -1,0 +1,60 @@
+.SinupContainer{
+    background-color:rgb(237, 244, 246);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.content{
+    background-color:#fff;
+    padding: 20px;
+    width: 600px;
+    height: 80%;
+    float: right;
+   margin: 50px;
+   margin-left: 550px;
+}
+.content a{
+    float: right;
+    margin-right: 70px;
+}
+.icon{
+    text-align: center;
+}
+.sigupForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.names input{
+   width: 200px;
+   height: 20px;
+   margin: 10px;
+   padding: 20px;
+   border-radius: 5px;
+   border: 1.5px solid rgb(94, 95, 95);
+}
+.email,
+.password{
+    width: 462px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(94, 95, 95);
+}
+.sigupbtn{
+    width: 462px;
+    height: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}

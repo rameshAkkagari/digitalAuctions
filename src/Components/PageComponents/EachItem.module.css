@@ -1,0 +1,71 @@
+.backLinks a{
+    margin-left: 20px;
+    padding: 5px;
+    margin: 5px;
+    color: black;
+    text-align: center;
+}
+
+.mainContent{
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+}
+.auctionsTimes{
+    display: flex;
+    justify-content: space-between;
+}
+.auctionsTimes p span{
+    padding: 5px;
+}
+.auctionItemDetails{
+    display: flex;
+    margin-top: 20px;
+    
+}
+.auctionImg{
+    width: 400px;
+    height: 500px;
+    max-height: 500px;
+    object-fit:cover;
+}
+.auctionItemDetails>div>p{
+    font-size: 16px;
+    width: 700px;
+    line-break: auto;
+    line-height: 35px;
+}
+.readMoreBtn{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.readMoreBtn:hover{
+    background-color: rgb(170, 193, 236);
+}
+.smallImg{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.registerBTN{
+    width: 260px;
+    padding:15px;
+    font-size:19px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+.registerBTN:hover{
+    background-color:rgb(180, 179, 179) ;
+}
+.itemVideo{
+    width:700px;
+    height: 300px;
+    margin-top: 60px;
+}

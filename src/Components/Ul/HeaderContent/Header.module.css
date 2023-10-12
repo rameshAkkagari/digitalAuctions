@@ -1,0 +1,24 @@
+.header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header h1{
+    text-transform: uppercase;
+}
+
+.links li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+}
+.links li a{
+    text-decoration: none;
+    color:black;
+}
+.links li:hover{
+    color: rgb(115, 123, 131);
+}

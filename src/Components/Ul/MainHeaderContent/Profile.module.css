@@ -1,0 +1,39 @@
+.profilbackdrop{
+    font-family: sans-serif;
+    text-align: center;
+    background: rgb(230, 235, 239);
+    min-height: 90vh;
+    padding: 1rem;
+}
+
+.userinfo{
+    display: inline-block;
+    width: 400px;
+    height:400px;
+    margin: 3rem;
+    flex: 0.5;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem;
+}
+
+.userimage {
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+.userinfo>button{
+    margin: 10px;
+    width: 120px;
+    padding:5px;
+    font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.userinfo>button:hover{
+    background-color: #4f005f;
+    color:white;
+}

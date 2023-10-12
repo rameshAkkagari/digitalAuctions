@@ -1,0 +1,37 @@
+.mainLinks{
+    display: flex;
+    justify-content: space-between;
+    background-color:#fff;
+    align-items: center;
+}
+.links{
+    margin-left: 40px;
+}
+.links ul a{
+   display: inline-block;
+   padding:15px;
+   margin: 4px;
+   cursor: pointer;
+   color: black;
+   text-decoration: none;
+   transition: 0.3s;
+}
+.links ul a:hover{
+    color: rgb(122, 185, 240);
+}
+.links ul a span{
+    padding: 4px;
+}
+.profile ul a{
+    display: inline-block;
+    padding: 20px;
+    margin-right:30px;
+    color: black;
+    text-decoration: none;
+}
+.profile ul a:hover{
+    color: rgb(122, 185, 240);
+}
+.profile ul a span{
+    padding:5px ;
+}

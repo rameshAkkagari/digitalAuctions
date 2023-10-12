@@ -1,0 +1,51 @@
+
+.publickAuctionsItem{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.auctionItems {
+    /* background-color: antiquewhite; */
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+.auctionItems img{
+    min-width: 300px;
+    height: 380px;
+    object-fit: cover;
+    width: 450px;
+}
+.itemDetails{
+    width: 800px;
+    margin-left: 10px;
+}
+.itemDetails p{
+    font-size: 20px;
+}
+.viewAuctions{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
