@@ -1,0 +1,26 @@
+.allfeatures{
+    width: 80%;
+    height: 88.5vh;
+    margin: auto;
+    background-color:rgb(237, 244, 246);
+    padding: 20px;
+}
+.allfeatures>h1{
+    text-align: center;
+}
+.features{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 10px;
+}
+.eachFeatures{
+    width: 500px; 
+}
+.eachFeatures>h3{
+    color:#40cd91;
+}
+.eachFeatures>p{
+    width: 350px;
+    line-height: 25px;
+}

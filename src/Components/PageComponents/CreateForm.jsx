@@ -1,9 +1,4 @@
 import React, { Fragment, useState } from "react";
-
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-
-
 import classes from "./CreateForm.module.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -11,6 +6,8 @@ import axios from '../../api/axios';
 import TagsInput from 'react-tagsinput';
 import 'react-tagsinput/react-tagsinput.css';
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function CreateForm() {
     const navigate = useNavigate()
     const AUCTIONS  = 'api/v1/auctions'
@@ -46,7 +43,7 @@ function CreateForm() {
 
     const handlerSubmitAuctionItem  =async (e)=>{
         e.preventDefault()
-         try {
+        try {
             const response = await axios.post(AUCTIONS,JSON.stringify({
                 name:auctionName,
                 description:description,
@@ -66,11 +63,15 @@ function CreateForm() {
             console.log(response);
             if(response.status === 201){
                 setSuccessFullAdd("Auction created successfully")
+                toast.success('Auction created successfully')
+
                 setTimeout(() => {
-                    navigate("/actions");
-                  }, 3000);
+                    navigate("/my_auctions");
+                    // toast.success('Auction created successfully')
+                  }, 2500);
             }
-        } catch (err) {
+            
+            } catch (err) {
             console.log('error');
             let error = err.response.data.errors
             if(error.name){
@@ -89,8 +90,8 @@ function CreateForm() {
 
   return (
     <div className={classes.formContainer}>
-      <h1>Create Auction</h1>
-      {successFullAdd ? <h2>{successFullAdd}</h2> : <form className={classes.formAdding} onSubmit={handlerSubmitAuctionItem}>
+        <h1>Create Auction</h1>
+        {successFullAdd ? <h2>{successFullAdd}</h2> : <form className={classes.formAdding} onSubmit={handlerSubmitAuctionItem}>
         <div className={classes.textfileds}>
             <label htmlFor="name"> Auction Name</label>
             {nameError && <span>{nameError}</span>}
@@ -113,7 +114,7 @@ function CreateForm() {
         </div>
 
         <div className={classes.textfileds}>
-            <label htmlFor="start date time">start_date_time</label>
+            <label htmlFor="start date time">start date time</label>
             {startTimeError && <span>{startTimeError}</span>}
             <DatePicker
                 selected={startDate}
@@ -122,7 +123,7 @@ function CreateForm() {
         </div>
 
         <div className={classes.textfileds}>
-            <label htmlFor="End date time">End_date_time</label>
+            <label htmlFor="End date time">End date time</label>
             <DatePicker
                 selected={endDate}
                 onChange={endhandleDateChange}
@@ -132,7 +133,7 @@ function CreateForm() {
         <div className={classes.textfileds}>
             <label htmlFor="poster">Poster</label>
             <input 
-                type="text" 
+                type="url" 
                 placeholder="Poster" 
                 value={poster}
                 onChange={(e) => setPoster(e.target.value)}
@@ -140,7 +141,7 @@ function CreateForm() {
         </div>
 
         <div className={classes.textfileds}>
-          <label htmlFor="auction url">Auction_url</label>
+            <label htmlFor="auction url">Auction url</label>
             {auction_urlError && <span>{auction_urlError}</span>}
             <input 
                 type="" 
@@ -167,9 +168,8 @@ function CreateForm() {
                 onChange={handleChange}
             />
         </div>
-
         <button className={classes.adding}>Create</button>
-        <Skeleton count={4}/>
+        <ToastContainer/>
       </form>}
       
     </div>

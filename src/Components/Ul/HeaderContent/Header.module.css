@@ -19,6 +19,9 @@
     text-decoration: none;
     color:black;
 }
+.links li a.active{
+    color:#40cd91;
+}
 .links li:hover{
-    color: rgb(115, 123, 131);
+    color:lightcoral;
 }

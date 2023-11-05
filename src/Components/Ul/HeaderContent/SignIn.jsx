@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import classes from './SignIn.module.css';
-import { TbH3, TbLock } from "react-icons/tb";
+import { TbLock } from "react-icons/tb";
 import { NavLink,useNavigate } from 'react-router-dom';
 import axios from '../../../api/axios';
-
 const LOGIN = '/api/v1/users/sign_in'
 function SignIn() {
 
@@ -36,12 +35,12 @@ function SignIn() {
             console.log(response);
             
             if(response.status === 200){
+                toast.success("Login successful",{position:toast.POSITION.TOP_RIGHT,theme:"dark"})
                 setLogin("Login successful")
-                    home("/dashboard")
-                    toast("Login successful",{position:toast.POSITION.TOP_CENTER})
-                    setTimeout(()=>{
-                        window.location.reload(true);
-                    },1500)
+                setTimeout(()=>{
+                    home("/")
+                    window.location.reload(true);
+                    },1000)
             }
             console.log(response.data.token);
             const token  = response.data.token;
@@ -50,24 +49,20 @@ function SignIn() {
             setPassword("")
             setusernotFound("")
             
-        } catch (error) {
-            // console.log('In Catch Block')
+        }catch (error) {
+            console.log(error);
             if(error.response.status === 404){
                 setusernotFound('User not found',{position:toast.POSITION.TOP_RIGHT})
-                // window.location.reload(false)
-                toast.error("User not found")
+                toast.error("Enter your EmailAddresses")
             }
             if(error.response.status === 401){
                 setWorngPwd("Incorrect password")
-                // window.location.reload(false)
                 toast.warning("Incorrect password",{position:toast.POSITION.TOP_RIGHT})
 
             }
             if(error.response.status === 500){
                 setServerError("Internal Server Error")
-                // window.location.reload(false)
             }
-            // window.location.reload(false)
             
         }
         
@@ -110,16 +105,13 @@ function SignIn() {
                 </div>
 
                 <button className={classes.sigupbtn}>Sign In</button>
-                <ToastContainer></ToastContainer>
                 <div className={classes.user}>
-                    <a href="#"><small>Forgot password</small></a>
+                    {/* <a href="#"><small>Forgot password</small></a> */}
                     <NavLink to="/signup"><small>Don't have an account ? sig Up</small></NavLink>
                 </div>
                 
             </form>
-               
-
-                
+                <ToastContainer></ToastContainer>
         </div>
     </div>
    

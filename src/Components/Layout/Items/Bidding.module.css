@@ -38,16 +38,25 @@
 }
 .actionsButtons{
     display: flex;
-    gap: 2rem;
+    gap:1rem;
 }
-.actionsButtons button{
-    width:90px;
-    height: 50px;
-    font-size:40px;
-    border-radius: 100%;
+.actionsButtons>input{
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
-.actionsButtons span{
-    font-size: 60px;
+.actionsButtons>button{
+    width: 100px;
+    font-size: medium;
+    border-radius: 5px;
+    color: black;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.actionsButtons>button:hover{
+    color: white;
+    background-color: #4f005f;
 }
 .placeBID {
     width: 90px;
@@ -59,4 +68,11 @@
 }
 ul li{
     line-height: 40px;
+}
+.startTime>span{
+   margin: 9px;
+}
+.biddingdescription{
+    width: 850px;
+    margin-left: 35px;
 }

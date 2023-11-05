@@ -1,0 +1,97 @@
+.addressesSection{
+    width: 65vw;
+    margin: auto;
+    background-color: #f1f3f6;
+    height: 100vh;
+}
+.addresses{
+    padding: 20px;
+}
+.addnew{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+    gap: 1rem;
+    border: 0.5px solid lightgray;
+}
+
+/* EDITADDRESSESFORM */
+
+
+.editFrom{
+    width: 90%;
+    background-color:white;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.formGropu{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formContainer>input{
+   width: 250px;
+   padding: 15px;
+   margin: 10px;
+   font-size: 16px;
+   border-radius: 5px;
+   border: 1px solid black;
+}
+.seleteState{
+    width: 280px;
+    padding: 15px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.addressDescription{
+    width: 580px;
+    margin-left: 10px;
+}
+.addressBtn>button{
+    width: 150px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.addressBtn>button:hover{
+  background-color: #4f005f;
+  color: white;
+}
+
+/* USERADDRESSES */
+
+
+.currentAddress{
+    width: 90%;
+    margin-left: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    height: 150px;
+    margin: 30px;
+}
+.currentAddress>p{
+    display: flex;
+    justify-content: space-between;
+}
+.user>span{
+    font-weight:bolder;
+    padding: 5px;
+}
+.currentAddress>small{
+ float: right;
+ margin: 0px;
+ padding: 0px;
+}

@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import classes from './MyAuctions.module.css';
 import { MdLocationOn } from "react-icons/md";
 import {  FaChevronRight } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 function MyAuctions() {
   const GETAUCTIONS = 'api/v1/auctions/created?page=1&page_size=10'
   const token = localStorage.getItem("token")
   const [myauctions,setMyAuctions] = useState([])
   const [nodata,setNodata] = useState("")
+  const navigate = useNavigate()
+
   useEffect(()=>{
     async function fetchAuctions() {
         try {
@@ -28,11 +31,13 @@ function MyAuctions() {
                     month: 'long',
                     day: '2-digit', 
                 })
-         }));
-              if(response.status === 404){
+            }));
+            
+            if(response.status === 404){
                 setNodata('The auction you are looking is not present in the database')
             }
               setMyAuctions(auctionsWithFormattedDates);
+
             } catch (error) {
                 console.error('Error fetching auctions:', error);
         }
@@ -40,6 +45,11 @@ function MyAuctions() {
 
         fetchAuctions()
     },[token])
+    const yourAuctions = myauctions.length === 0
+
+    const handlerNewAuction = () =>{
+        navigate('/create')
+    }
   return (
         <div>
             <figure className={classes.banner}>
@@ -47,7 +57,7 @@ function MyAuctions() {
                 <img src='https://contemporarylynx.co.uk/wp-content/uploads/2019/09/auction-hammer.jpg' alt='auctionsBanner'/>
             </figure>
             {nodata && <h4>{nodata}</h4>}
-            <ul className={classes.auctionItems}>
+            {/* <ul className={classes.auctionItems}>
                 {myauctions.map((item)=><Link to={`/my_auctions/${item._id}`} key={item._id} className={classes.items}>
                     <img src={item.poster} alt="Large Scale" />
                     <div>
@@ -60,10 +70,46 @@ function MyAuctions() {
                         <span className={classes.icon}><FaChevronRight/></span>
                     </div>
                 </Link>)}
-            </ul>
-          
+            </ul> */}
+            <div className={classes.allAuctionsItems}>
+            <section className={classes.totalAuctions}>
+                   {yourAuctions && <button className={classes.addYourauction} onClick={handlerNewAuction}>Add your auction</button>}
+                {!yourAuctions && <div className={classes.publickAuctions}>
+                    {myauctions.map((item)=><Link to={`/my_auctions/${item._id}`} className={classes.publickAuctionsItems}>
+                        <img className={classes.auctionimage} src={item.poster}/>
+                        <div className={classes.auctionitemText}>
+                            {/* <h5>{moment(item.start_date_time).format('ddd, MMM D YYYY h:mm A')}</h5> */}
+                            <h1>{item.name}</h1>
+                            <h5>Online</h5>
+                            <p className={classes.itemdescription}>{item.description}</p>
+                            <span className={classes.viewAuctions}>view Auctions</span>
+                            <span className={classes.icon}></span>
+
+                        </div>
+                    </Link>)}
+                </div>}
+            </section>  
+        </div>
         </div>
       )
     }
     
 export default MyAuctions
+
+
+{/* <div className={classes.allAuctionsItems}>
+            <section className={classes.totalAuctions}>
+                <div className={classes.publickAuctions}>
+                    {publickAuctions.map((item)=><Link to={`/my_auctions/${item._id}`} className={classes.publickAuctionsItems}>
+                        <img className={classes.auctionimage} src={item.poster}/>
+                        <div className={classes.auctionitemText}>
+                            <h5>{moment(item.start_date_time).format('ddd, MMM D YYYY h:mm A')}</h5>
+                            <h1>{item.name}</h1>
+                            <h5>Online</h5>
+                            <p className={classes.itemdescription}>{item.description}</p>
+                            <span className={classes.viewAuctions}>view Auctions</span>
+                        </div>
+                    </Link>)}
+                </div>
+            </section>  
+        </div> */}

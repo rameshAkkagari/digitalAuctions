@@ -18,20 +18,19 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
 }
-
-.userimage {
+.userimage{
     border-radius: 50%;
-    border: 1px solid black;
     height: 100px;
     width: 100px;
 }
 .userinfo>button{
     margin: 10px;
-    width: 120px;
-    padding:5px;
+    width: 150px;
+    padding:10px;
     font-size: 15px;
     transition: 0.3s;
     cursor: pointer;
+    border: none;
 }
 .userinfo>button:hover{
     background-color: #4f005f;

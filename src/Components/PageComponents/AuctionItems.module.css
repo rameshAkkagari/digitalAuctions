@@ -1,36 +1,142 @@
-
+/* 
 .publickAuctionsItem{
     width: 70%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    height: auto;
+    margin-top: 50px;
+
 }
 .auctionItems {
-    /* background-color: antiquewhite; */
     display: flex;
+    text-decoration: none;
+    width: 100%;
+    height: 340px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 35px;
     text-decoration: none;
     color: black;
 }
-.auctionItems img{
-    min-width: 300px;
-    height: 380px;
-    object-fit: cover;
-    width: 450px;
+.auctionItems>img{
+    margin: 10px;
+    width: 420px;
+    min-width: 400px;
+    height:80%;
+    object-fit: cover; 
+    border-radius: 5px;
 }
 .itemDetails{
-    width: 800px;
-    margin-left: 10px;
+    text-decoration: none;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
-.itemDetails p{
-    font-size: 20px;
+.itemdescription{
+    margin-top: 6px;
+    font-size: medium;
+    width: 100%;
+    height: 120px;
 }
 .viewAuctions{
     text-decoration: none;
     color: black;
-    font-size: 25px;
+    font-size:18px;
+    padding: 10px;
     text-decoration: underline;
 }
+.viewAuctions:hover{
+    color: lightseagreen;
+} */
+
+.allAuctionsItems{
+    margin-top: 40px;
+}
+
+.publickAuctions{
+    display: flex;
+    flex-direction: column;
+    column-gap: 2rem;
+}
+.totalAuctions{
+    width: 80%;
+    margin: auto;
+    height: auto;
+}
+.auctionimage{
+    margin-top: 10px;
+    width: 450px;
+    min-width: 400px;
+    height:90%;
+    object-fit: cover; 
+}
+.publickAuctionsItems{
+    text-decoration: none;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 350px;
+    gap: 2rem;
+    padding: 20px;
+    margin: 20px;
+    color: black;
+    border-radius: 8px;
+}
+.auctionitemText{
+    width: 100%;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 20px;
+}
+.auctionitemText>h1,h5{
+  margin: 0px;
+}
+.itemdescription{
+    margin: 0px;
+    font-size: medium;
+    width: 900px;
+    height: 120px;
+    padding: 0px;
+}
+.viewAuctions{
+    text-decoration: none;
+    color: black;
+    font-size:20px;
+    text-decoration: underline;
+}
+.viewAuctions:hover{
+    color: lightseagreen;
+}
+.pagebtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+.pagebtns>h2{
+    border: 1px solid black;
+    width: 30px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+.pagebtns>button{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: none;
+}
+.pagebtns>button:hover{
+    background-color: #4f005f;
+    color:white;
+}
+
+
+
 
 
 

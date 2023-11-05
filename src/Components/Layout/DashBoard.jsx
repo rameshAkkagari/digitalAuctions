@@ -13,6 +13,7 @@ function DashBoard() {
                         <h1>Digital Auctions</h1>
                         <p>Digital Auction makes it easy and safe to buy and sell unclaimed vahicles <br/> from the comfort of your home or office</p>
                     </div>
+                    
                     <div className={classes.actionbtn}>
                         <button className={classes.welcome}>Welcome</button>
                         <button>view All actions</button>

@@ -1,0 +1,86 @@
+.contactpage{
+    /* background-color: #40cd91; */
+    background-color:rgb(237, 244, 246);
+    width: 100vw;
+    height:98vh;
+}
+.details{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.contact{
+    font-size: 35px;
+}
+.formgroup{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.formgroup>input{
+    width: 400px;
+    height: 30px;
+    padding:10px;
+    border: none;
+    color: #40cd91;
+    text-decoration: none;
+}
+.formgroup>input::placeholder{
+    color: #40cd91;
+    font-size: 16px;
+}
+
+.formgroup>p{
+    width: 550px;
+    padding: 0px;
+    margin: 0px;
+}
+.formgroup>button{
+    padding: 15px;
+    width: 200px;
+    font-size: medium;
+    background: #003c3e;
+    color: #40cd91;
+    transition: all .4s ease;
+    border: none;
+    cursor: pointer;
+}
+.formgroup>button:hover{
+    background-color: #fff;
+    color: #40cd91;
+}
+.dev{
+    margin-top: 20px;
+    width: 480px;
+    background-color: #fff;
+    height: 400px;
+    
+}
+.dev>p{
+    width: 85%;
+    line-height: 25px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+.devDetails{
+    display: flex;
+    margin-top: 40px;
+    padding: 15px;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.devDetails>img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: 2px solid #40cd91;
+}
+.name{
+    margin: 0px;
+    color: #40cd91;
+}

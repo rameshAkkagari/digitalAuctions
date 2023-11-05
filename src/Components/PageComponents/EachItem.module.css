@@ -11,29 +11,26 @@
     margin: auto;
     margin-top: 60px;
 }
-.auctionsTimes{
-    display: flex;
-    justify-content: space-between;
-}
-.auctionsTimes p span{
-    padding: 5px;
-}
 .auctionItemDetails{
     display: flex;
     margin-top: 20px;
-    
+    justify-content: space-between;
 }
 .auctionImg{
     width: 400px;
     height: 500px;
     max-height: 500px;
     object-fit:cover;
+    margin-left: 60px;
 }
-.auctionItemDetails>div>p{
+.auctionItemDescription{
     font-size: 16px;
+    margin-top: 20px;
     width: 700px;
+    height: 400px;
     line-break: auto;
     line-height: 35px;
+    margin-bottom: 10px;
 }
 .readMoreBtn{
     width: 100px;
@@ -55,17 +52,38 @@
     width: 260px;
     padding:15px;
     font-size:19px;
-    color: white;
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
 }
 .registerBTN:hover{
-    background-color:rgb(180, 179, 179) ;
+    background-color: #4f005f;
+    color:white;
 }
-.itemVideo{
-    width:700px;
-    height: 300px;
-    margin-top: 60px;
+/* CHANGE */
+.auctionhardCode{
+    width: 800px;
+    height: 40px;
+    margin: 10px;
+}
+.auctionTime{
+    width:250px;
+    height: 20px;
+    margin: 5px;
+}
+.timeicon{
+    width: 40px;
+    height: 20px;
+    border-radius: 70%;
+}
+.title{
+    width: 280px;
+    height: 40px;
+}
+.join{
+    width: 300px;
+    margin-bottom: 5px;
 }

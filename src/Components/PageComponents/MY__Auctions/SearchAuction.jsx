@@ -4,9 +4,9 @@ function SearchAuction({onReacive}) {
   const [serachAuction,setSearchAuction] = useState("")
   onReacive(serachAuction)
   return (
-      <div className={classes.searchinput}>
+    <div className={classes.searchinput}>
         <input type='text' placeholder='Search Auctions' value={serachAuction} onChange={(e)=>setSearchAuction(e.target.value)}/>
-      </div>
+    </div>
   )
 }
 

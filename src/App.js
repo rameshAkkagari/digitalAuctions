@@ -37,41 +37,46 @@ import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Root from './Pages/Root';
 import Home from './Pages/Home';
+import Contact from './Components/Ul/landingPages/Contact';
 import Signup from './Components/Ul/HeaderContent/SignUp';
 import SignIn from './Components/Ul/HeaderContent/SignIn';
-import DashBoard from './Components/Layout/DashBoard';
 import Actions from './Pages/Auctions';
 import EachItem from './Components/PageComponents/EachItem';
-import Footer from './Components/Ul/MainHeaderContent/Footer';
+// import Footer from './Components/Ul/MainHeaderContent/Footer';
 import Create from './Pages/Create';
 import ReqiuedAuth from './Pages/ReqiuedAuth';
 import MyAuctionPage from './Pages/MyAuctionPage';
 import Profile from './Pages/Profile';
-import MyAuctionItemDetails from './Components/PageComponents/Auctions/MyAuctionItemDetails';
+import MyAuctionItemDetails from './Components/PageComponents/MY__Auctions/MyAuctionItemDetails';
 import Bidding from './Components/Layout/Items/Bidding';
 import EditAuction from './Components/PageComponents/EditAuction';
+import MyRegisterAuctions from './Components/PageComponents/MY__Auctions/My_RegisterAuctions';
+import Addresses from './Components/Layout/UserDetails/Addresses';
+import Features from './Components/Ul/landingPages/Features';
+// import AddNewAddress from './Components/Layout/UserDetails/AddNewAddress';
 function App() {
   return (
     <div>
-      <Root/>
-      <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/signup' element={<Signup/>}/>
-            <Route path='/signin' element={<SignIn/>}/>
-
-            <Route element={<ReqiuedAuth/>}>
-              <Route path='/dashboard' element={<DashBoard/>}/>
-              <Route path='/actions' element={<Actions/>}/>
-              <Route path='/actions/:url' element={<EachItem/>}/>
-              <Route path='/create' element={<Create/>}/>
-              <Route path='/my_auctions' element={<MyAuctionPage/>}/>
-              <Route path='/my_auctions/:myitem' element={<MyAuctionItemDetails/>}/>
-              <Route path='/bidding' element={<Bidding/>}/>
-              <Route path='/profile' element={<Profile/>}/>
-              <Route path='/editauction__/:_id' element={<EditAuction/>}/>
-
-            </Route>
-      </Routes>
+        <Root/>
+        <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/signup' element={<Signup/>}/>
+                <Route path='/signin' element={<SignIn/>}/>
+                <Route path='/contact' element={<Contact/>}/>
+                <Route path='/features' element={<Features/>}/>
+                <Route element={<ReqiuedAuth/>}>
+                    <Route path='/actions' element={<Actions/>}/>
+                    <Route path='/actions/:url' element={<EachItem/>}/>
+                    <Route path='/create' element={<Create/>}/>
+                    <Route path='/my_auctions' element={<MyAuctionPage/>}/>
+                    <Route path='/my_auctions/:myitem' element={<MyAuctionItemDetails/>}/>
+                    <Route path='/profile' element={<Profile/>}/>
+                    <Route path='/editauction__/:_id' element={<EditAuction/>}/>
+                    <Route path='/myregisterAuctions' element={<MyRegisterAuctions/>}/>
+                    <Route path='/bidding/:id' element={<Bidding/>}/>
+                    <Route path='/addresses' element={<Addresses/>}/>
+                </Route>
+        </Routes>
       {/* <Footer/> */}
     </div>
   )

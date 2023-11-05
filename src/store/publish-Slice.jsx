@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const ModalShow = createSlice({
+const publishShow = createSlice({
     name:"modal",
     initialState:{modaltoggle:false},
     reducers:{
@@ -9,6 +9,6 @@ const ModalShow = createSlice({
         }
     }
 })
-export const ModalActions = ModalShow.actions
+export const publishShowActions = publishShow.actions
 
-export default ModalShow
+export default publishShow

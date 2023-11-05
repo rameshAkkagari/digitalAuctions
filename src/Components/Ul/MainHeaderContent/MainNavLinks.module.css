@@ -16,6 +16,9 @@
    text-decoration: none;
    transition: 0.3s;
 }
+.links ul a.active{
+    color: #40cd91;
+}
 .links ul a:hover{
     color: rgb(122, 185, 240);
 }
@@ -29,9 +32,30 @@
     color: black;
     text-decoration: none;
 }
-.profile ul a:hover{
+.profile>ul>a:hover{
     color: rgb(122, 185, 240);
+}
+.profile>ul>a.active{
+    color: #40cd91;
 }
 .profile ul a span{
     padding:5px ;
+}
+.account{
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+}
+.account>a{
+    display: block;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    z-index:999;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.account>a:hover{
+    background-color: #4f005f;
+    color:#fff;
 }

@@ -3,26 +3,28 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import classes from './ConformModal.module.css';
 import ReactDOM from "react-dom";
-import { ModalActions } from '../store/Modal-Slice';
+import { publishShowActions } from '../store/publish-Slice';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-function ConformModal() {
+import axios from '../api/axios';
+function Publish() {
 
   const [successFullUnPublish,setSuccessFullUnPublish] = useState("")
-    const id = useParams()
-    const myitem = id.myitem
-    console.log(myitem);
-    const dispatch = useDispatch()
+        const id = useParams()
+        const myitem = id.myitem
+        console.log(myitem);
+        const dispatch = useDispatch()
 
-    const token = localStorage.getItem("token")
-    const handlerCancle = () =>{
-        dispatch(ModalActions.toggle())
-    }
+       const token = localStorage.getItem("token")
+
+
+        const handlerCancle = () =>{
+            dispatch(publishShowActions.toggle())
+        }
     const publishHandler = async() =>{
-      console.log('ok');
-          try {
-            const response =await axios.patch(`http://192.168.1.11:3000/api/v1/auctions/${myitem}/publish`,null,{
+        console.log('ok');
+            try{
+            const response =await axios.patch(`api/v1/auctions/${myitem}/publish`,null,{
                 headers: { Authorization: token },
             })
             if(response.status === 200){
@@ -50,13 +52,13 @@ function ConformModal() {
         <header className={classes.header}>
              <h3>{successFullUnPublish ? 'The auction has been published successfully.' : 'Are you sure you want publish ?'}</h3>
         </header>
-        {!successFullUnPublish && <div className={classes.actionBtns}>
+        {!successFullUnPublish && <div className={classes.registeractionBtns}>
             <button onClick={handlerCancle}>Cancle</button>
             <button onClick={publishHandler}>Confirm</button>
             <ToastContainer></ToastContainer>
         </div> }
+        {successFullUnPublish &&  <div className={classes.registeractionBtns}><button onClick={okey}>Okey</button></div> }
 
-        {successFullUnPublish &&  <div className={classes.actionBtns}><button onClick={okey}>Okey</button></div> }
        
     </div>
       )
@@ -70,4 +72,4 @@ function ConformModal() {
   )
 }
 
-export default ConformModal
+export default Publish

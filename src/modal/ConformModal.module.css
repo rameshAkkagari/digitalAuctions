@@ -29,7 +29,7 @@
     color: white;
 }
 
-.actionBtns{
+.registeractionBtns{
     width: 100%;
     background-color: white;
     height: 15vh;
@@ -37,7 +37,7 @@
     align-items: center;
     justify-content: center;
 }
-.actionBtns>button{
+.registeractionBtns>button{
     width: 130px;
     padding: 10px;
     margin: 20px;
@@ -46,7 +46,7 @@
     transition: 0.3s;
     border-radius: 5px;
 }
-.actionBtns>button:hover{
+.registeractionBtns>button:hover{
     background-color: #4f005f;
     color:white;
 }
